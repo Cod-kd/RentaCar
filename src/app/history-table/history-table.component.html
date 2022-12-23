@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Car</th>
+            <th scope="col">Start at</th>
+            <th scope="col">End at</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let historyElement of historyElements">
+            <th scope="row">{{historyElement.carID}}</th>
+            <td>{{historyElement.startAt | date:"Y M.d."}}</td>
+            <td>{{!historyElement.endAt? "-" : historyElement.endAt | date:"Y M.d."}}</td>
+        </tr>
+    </tbody>
+</table>
