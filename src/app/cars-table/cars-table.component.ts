@@ -11,7 +11,7 @@ import { UserProfile } from '../tables/userData';
 export class CarsTableComponent {
   /* from SQL later */
   brand: string | undefined = "";
-  rentSelectedCar: RentalHistory = { clientID: UserProfile.id };
+  rentSelectedCar: RentalHistory = { clientID: UserProfile.getID };
   setCarData(id: number | undefined, brand: string | undefined) {
     this.rentSelectedCar.carID = id;
     this.brand = brand;

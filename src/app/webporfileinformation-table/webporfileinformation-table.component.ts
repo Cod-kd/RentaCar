@@ -15,6 +15,6 @@ export class WebporfileinformationTableComponent {
   
   logOut(){
     UserProfile.setLoggedInStatus = false;
-    console.log(UserProfile.loggedInStatus)
+    console.log(UserProfile.getLoggedInStatus)
   }
 }

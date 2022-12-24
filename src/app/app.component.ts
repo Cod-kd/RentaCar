@@ -8,5 +8,5 @@ import { UserProfile } from './tables/userData';
 })
 export class AppComponent {
   title = 'RentaCar';
-  loginStatus: boolean = UserProfile.loggedInStatus;
+  loginStatus: boolean = UserProfile.getLoggedInStatus;
 }
