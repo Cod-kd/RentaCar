@@ -6,7 +6,7 @@ export interface UserData extends ClienData {
 }
 
 export class UserProfile {
-    public static loggedInStatus: boolean; //set it true and the page will changes behavior
+    public static loggedInStatus: boolean; //set it true and the page will change behavior
     public static id: number; //userid from SQL later
 
     public static set setLoggedInStatus(status:any) {
