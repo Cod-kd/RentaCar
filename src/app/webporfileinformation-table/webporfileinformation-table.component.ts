@@ -13,6 +13,6 @@ export class WebporfileinformationTableComponent {
     tel: "+25 15 215 7887"
   };
   logOut(){
-    UserProfile.loggedInStatus = false;
+    UserProfile.setLoggedInStatus(false);
   }
 }

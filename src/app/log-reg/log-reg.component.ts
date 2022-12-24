@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserProfile } from '../tables/userData';
 
 @Component({
   selector: 'app-log-reg',
@@ -15,5 +16,16 @@ export class LogRegComponent {
   displayRegister() {
     this.regState = "active";
     this.logState = "";
+  }
+  signUp(event: any) {
+    event.preventDefault();
+    /* if data is valid */
+    //insert into sql
+    this.displayLogin();
+  }
+  signIn(event: any) {
+    event.preventDefault();
+    /* if data is valid */
+    UserProfile.setLoggedInStatus(true);
   }
 }
