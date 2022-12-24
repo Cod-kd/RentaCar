@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserData } from '../tables/userData';
+import { UserData, UserProfile } from '../tables/userData';
 
 @Component({
   selector: 'app-webporfileinformation-table',
@@ -11,5 +11,8 @@ export class WebporfileinformationTableComponent {
     username: "User",
     name: "Aklws Akjwfh",
     tel: "+25 15 215 7887"
+  };
+  logOut(){
+    UserProfile.loggedInStatus = false;
   }
 }
