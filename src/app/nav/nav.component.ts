@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserProfile } from '../tables/userData';
 
 @Component({
   selector: 'app-nav',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
+  loginStatus: boolean = UserProfile.loggedInStatus;
+  disableIfUserNotIn: string = this.loginStatus ? "" : "disabled";
 }

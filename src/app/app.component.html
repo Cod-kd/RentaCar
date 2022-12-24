@@ -1,15 +1,15 @@
 <header>
-  <app-nav></app-nav>
+  <app-nav id="home"></app-nav>
 </header>
 <section>
   <h1>/Rentable cars/</h1>
-  <app-cars-table></app-cars-table>
+  <app-cars-table id="car_table"></app-cars-table>
   <h1>/Someone's rental history/</h1>
-  <app-history-table></app-history-table>
+  <app-history-table id="rental_history"></app-history-table>
   <h1>/Someone's webprofile informations/</h1>
-  <app-webporfileinformation-table></app-webporfileinformation-table>
+  <app-webporfileinformation-table id="{{loginStatus? 'profile' : ''}}"></app-webporfileinformation-table>
   <h1>/Login or Register/</h1>
   <article style="width: 18rem; margin: auto;">
-    <app-log-reg></app-log-reg>
+    <app-log-reg id="{{loginStatus? '' : 'profile'}}"></app-log-reg>
   </article>
 </section>

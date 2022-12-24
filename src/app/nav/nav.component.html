@@ -2,18 +2,19 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Rent a car</a>
+    <a class="navbar-brand" href="#home">Rent a car</a> <!--where id="home"-->
   
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Profile<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#profile">Profile<span class="sr-only">(current)</span></a> <!--where id="profile"-->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cars</a>
+          <a class="nav-link" href="#car_table">Cars</a> <!--where id="car_table"-->
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Rental history</a>
+          <!-- !get class disabled if a the user logged in -->
+          <a class="nav-link {{disableIfUserNotIn}}" href="#rental_history" tabindex="-1" aria-disabled="loginStatus? 'false':'true'">Rental history</a>  <!--where id="rental_history"-->
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

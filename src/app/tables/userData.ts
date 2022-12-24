@@ -6,5 +6,6 @@ export interface UserData extends ClienData {
 }
 
 export class UserProfile {
-    public static id: number = 1; //userid from SQL later
+    public static loggedInStatus: boolean = false;
+    public static id: number = 0; //userid from SQL later
 }
