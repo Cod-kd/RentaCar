@@ -26,6 +26,7 @@ export class LogRegComponent {
   signIn(event: any) {
     event.preventDefault();
     /* if data is valid */
-    UserProfile.setLoggedInStatus(true);
+    UserProfile.setLoggedInStatus = true;
+    console.log(UserProfile.getLoggedInStatus);
   }
 }
