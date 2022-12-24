@@ -8,5 +8,4 @@ import { UserProfile } from '../tables/userData';
 })
 export class NavComponent {
   loginStatus: boolean = UserProfile.getLoggedInStatus;
-  disableIfUserNotIn: string = this.loginStatus ? "" : "disabled";
 }
