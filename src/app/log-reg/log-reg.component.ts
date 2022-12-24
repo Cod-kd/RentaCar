@@ -17,16 +17,18 @@ export class LogRegComponent {
     this.regState = "active";
     this.logState = "";
   }
-  signUp(event: any) {
+  signUp(event: any, name: string, username: string, email: string, tel: string, password: string, repeatPassword: string) {
     event.preventDefault();
-    /* if data is valid */
+    /* if data is valid & password == repeatPassword */
     //insert into sql
+    console.log(name, username, email, tel, password, repeatPassword);
     this.displayLogin();
   }
-  signIn(event: any) {
+  signIn(event: any, username: string, password: string) {
     event.preventDefault();
-    /* if data is valid */
+    /* if data in SQL */
     //UserProfile.setID = SQL id
+    console.log(username, password);
     UserProfile.setLoggedInStatus = true;
     console.log(UserProfile.getLoggedInStatus);
   }

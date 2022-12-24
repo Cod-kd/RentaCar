@@ -8,4 +8,9 @@ import { UserProfile } from '../tables/userData';
 })
 export class NavComponent {
   loginStatus: boolean = UserProfile.getLoggedInStatus;
+  search(event: any, value: string) {
+    event.preventDefault();
+    //search in SQL
+    console.log(value);
+  }
 }

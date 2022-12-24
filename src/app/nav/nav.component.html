@@ -17,8 +17,8 @@
           <a [ngClass]="loginStatus? 'nav-link' : 'nav-link disabled'" href="#rental_history" tabindex="-1" aria-disabled="loginStatus? 'false':'true'">Rental history</a>  <!--where id="rental_history"-->
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" (submit)="search($event, searcher.value)">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for a car..." aria-label="Search" #searcher>
         <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>

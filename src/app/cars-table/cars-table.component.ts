@@ -19,6 +19,9 @@ export class CarsTableComponent {
   setBookingData(start: string, end: string) {
     this.rentSelectedCar.startAt = new Date(start);
     this.rentSelectedCar.endAt = new Date(end);
+    /* if data is valid */
+    //insert into SQL
+    console.log(start,end, UserProfile.getID);
   }  
   carsData: CarData[] = [
     {
