@@ -12,8 +12,9 @@ export class WebporfileinformationTableComponent {
     name: "Aklws Akjwfh",
     tel: "+25 15 215 7887"
   };
-  
-  logOut(){
+
+  logOut() {
+    UserProfile.setID = 0;
     UserProfile.setLoggedInStatus = false;
     console.log(UserProfile.getLoggedInStatus)
   }
