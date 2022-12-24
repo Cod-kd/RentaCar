@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CarData } from '../tables/carData';
+import { RentalHistory } from '../tables/rentalHistory';
+import { UserProfile } from '../tables/userData';
+
 @Component({
   selector: 'app-cars-table',
   templateUrl: './cars-table.component.html',
@@ -7,6 +10,16 @@ import { CarData } from '../tables/carData';
 })
 export class CarsTableComponent {
   /* from SQL later */
+  brand: string | undefined = "";
+  rentSelectedCar: RentalHistory = { clientID: UserProfile.id };
+  setCarData(id: number | undefined, brand: string | undefined) {
+    this.rentSelectedCar.carID = id;
+    this.brand = brand;
+  }
+  setBookingData(start: string, end: string) {
+    this.rentSelectedCar.startAt = new Date(start);
+    this.rentSelectedCar.endAt = new Date(end);
+  }  
   carsData: CarData[] = [
     {
       carId: 1,

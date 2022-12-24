@@ -7,6 +7,7 @@ import { NavComponent } from './nav/nav.component';
 import { CarsTableComponent } from './cars-table/cars-table.component';
 import { HistoryTableComponent } from './history-table/history-table.component';
 import { WebporfileinformationTableComponent } from './webporfileinformation-table/webporfileinformation-table.component';
+import { LogRegComponent } from './log-reg/log-reg.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WebporfileinformationTableComponent } from './webporfileinformation-tab
     NavComponent,
     CarsTableComponent,
     HistoryTableComponent,
-    WebporfileinformationTableComponent
+    WebporfileinformationTableComponent,
+    LogRegComponent
   ],
   imports: [
     BrowserModule,

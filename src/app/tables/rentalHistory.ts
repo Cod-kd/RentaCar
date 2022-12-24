@@ -1,6 +1,6 @@
 export interface RentalHistory{
-    carID:number;
+    carID?:number;
     clientID?:number;
-    startAt:Date;
+    startAt?:Date;
     endAt?:Date;
 }

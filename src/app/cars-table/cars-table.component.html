@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let carData of carsData">
+        <tr (click)="setCarData(carData.carId, carData.carBrand)" *ngFor="let carData of carsData" data-toggle="modal" data-target="#rentalModal">
             <th scope="row">{{carData.carId}}</th>
             <td>{{carData.carBrand | titlecase}}</td>
             <td>{{carData.model}}</td>
@@ -19,4 +19,31 @@
             <td>{{carData.pricePerDay | currency}}</td>
         </tr>
     </tbody>
+
+    <!-- Modal -->
+    <div class="modal fade" id="rentalModal" tabindex="-1" role="dialog" aria-labelledby="rentalModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rentalModalLabel">Rent the {{brand}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="rentCarForm">
+                        <label for="stratAt">Set the starting date: </label>
+                        <input type="date" id="startAt" style="float: right;" #start>
+                        <label for="endAt">Set the ending date: </label>
+                        <input type="date" id="endAt" style="float: right;" #end>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="setBookingData(start.value, end.value)">Rent</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </table>
